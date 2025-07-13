@@ -54,7 +54,7 @@ class Typo3Config implements ConfigReaderInterface
      */
     private $overridesReader;
 
-    public function __construct(string $configFile, ConfigurationReaderFactory $readerFactory = null)
+    public function __construct(string $configFile, ?ConfigurationReaderFactory $readerFactory = null)
     {
         $readerFactory = $readerFactory ?? new ConfigurationReaderFactory(dirname($configFile));
         $readerFactory->setReaderFactoryForType(

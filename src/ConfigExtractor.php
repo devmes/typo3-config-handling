@@ -53,11 +53,11 @@ class ConfigExtractor
     private $overrideConfigFile;
 
     public function __construct(
-        ConfigDumper $configDumper = null,
-        ConfigCleaner $configCleaner = null,
-        ConfigLoader $configLoader = null,
-        ConfigurationReaderFactory $readerFactory = null,
-        string $overrideConfigFile = null
+        ?ConfigDumper $configDumper = null,
+        ?ConfigCleaner $configCleaner = null,
+        ?ConfigLoader $configLoader = null,
+        ?ConfigurationReaderFactory $readerFactory = null,
+        ?string $overrideConfigFile = null
     ) {
         $this->configDumper = $configDumper ?: new ConfigDumper();
         $this->configCleaner = $configCleaner ?: new ConfigCleaner();
@@ -66,7 +66,7 @@ class ConfigExtractor
         $this->overrideConfigFile = $overrideConfigFile ?: SettingsFiles::getOverrideSettingsFile();
     }
 
-    public function extractConfig(array $config, array $defaultConfig, string $configFile = null): bool
+    public function extractConfig(array $config, array $defaultConfig, ?string $configFile = null): bool
     {
         $configFile = $configFile ?: $this->overrideConfigFile;
         $extractedConfig = false;

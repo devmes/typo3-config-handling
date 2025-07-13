@@ -172,7 +172,7 @@ EOF;
         return addcslashes($value, '\\\'');
     }
 
-    private function extractPlaceHolder($value, array $types = null): array
+    private function extractPlaceHolder($value, ?array $types = null): array
     {
         if (!$this->isPlaceHolder($value)) {
             return [];

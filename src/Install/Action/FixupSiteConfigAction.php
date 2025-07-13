@@ -34,7 +34,7 @@ class FixupSiteConfigAction implements InstallActionInterface
         $this->output = $output;
     }
 
-    public function setCommandDispatcher(CommandDispatcher $commandDispatcher = null)
+    public function setCommandDispatcher(?CommandDispatcher $commandDispatcher = null)
     {
         $this->commandDispatcher = $commandDispatcher;
     }

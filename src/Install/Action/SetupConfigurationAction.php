@@ -48,7 +48,7 @@ class SetupConfigurationAction implements InstallActionInterface
      */
     private $commandDispatcher;
 
-    public function __construct(ConfigDumper $configDumper = null)
+    public function __construct(?ConfigDumper $configDumper = null)
     {
         $this->configDumper = $configDumper ?? new ConfigDumper();
     }
@@ -58,7 +58,7 @@ class SetupConfigurationAction implements InstallActionInterface
         $this->output = $output;
     }
 
-    public function setCommandDispatcher(CommandDispatcher $commandDispatcher = null): void
+    public function setCommandDispatcher(?CommandDispatcher $commandDispatcher = null): void
     {
         $this->commandDispatcher = $commandDispatcher;
     }

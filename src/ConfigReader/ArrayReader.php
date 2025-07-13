@@ -38,7 +38,7 @@ class ArrayReader implements ConfigReaderInterface
      */
     private $configPath;
 
-    public function __construct(array $config, string $configPath = null)
+    public function __construct(array $config, ?string $configPath = null)
     {
         $this->config = $config;
         $this->configPath = $configPath;

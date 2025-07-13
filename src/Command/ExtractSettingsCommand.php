@@ -47,8 +47,8 @@ class ExtractSettingsCommand extends Command
 
     public function __construct(
         $name = null,
-        ConfigurationManager $configurationManager = null,
-        ConfigExtractor $configExtractor = null
+        ?ConfigurationManager $configurationManager = null,
+        ?ConfigExtractor $configExtractor = null
     ) {
         parent::__construct($name);
         $this->configurationManager = $configurationManager ?: new ConfigurationManager();
