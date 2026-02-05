@@ -436,7 +436,7 @@ class ConfigurationManager
             // Remove key if path is within LocalConfiguration
             if (ArrayUtility::isValidPath($localConfiguration, $path)) {
                 $result = true;
-                $pathParts = str_getcsv($path, '/');
+                $pathParts = str_getcsv($path, '/', '"', '\\');
                 $removedPaths[] = sprintf('"%s"', implode('"."', $pathParts));
             }
         }
